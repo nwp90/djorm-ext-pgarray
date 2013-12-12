@@ -184,7 +184,7 @@ class ArrayFormFieldTests(TestCase):
     def test_regular_forms(self):
         form = IntArrayForm()
         self.assertFalse(form.is_valid())
-        form = IntArrayForm({'lista':u'[1,2]'})
+        form = IntArrayForm({'lista':u'1,2'})
         self.assertTrue(form.is_valid())
 
     def test_empty_value(self):
